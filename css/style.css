@@ -144,6 +144,94 @@ body::after {
 }
 
 
+.content {
+    position: relative;
+    flex: 1;
+    display: flex;
+    align-items: center;
+}
+
+.header-text {
+    position: absolute;
+    top: -20rem;
+    left: 38%;
+    transform: translateX(-50%);
+}
+
+.header-text h1 {
+    font: 3rem;
+    font-weight: 600;
+    color: #FF715B;
+}
+
+.header-text h2 {
+    text-align: center;
+}
+
+.header-text p {
+    text-align: center;
+    color: #252323;
+    font-weight: 700;
+    transition: all 0.4s ease-in-out;
+
+}
+
+.header-text p:hover{
+    color: #FF715B;
+}
+
+.cote-text {
+    position: absolute;
+    transform: rotate(-90deg);
+    right: 43%;
+    top: -30px;
+}
+
+.cote-text h4 {
+    font-size: 1.5rem;
+    font-weight: 600;
+    line-height: 1.5rem;
+    color: #252323;
+}
+
+.cote-text p {
+    color: #252323;
+    font-weight: 500;
+}
+
+.text-info {
+    display: block;
+    position: absolute;
+    width: 190px;
+    right: 33%;
+    top: -250px;
+}
+
+.text-info p {
+    color: white;
+}
+
+.buynow {
+    position: absolute;
+    display: block;
+    left: 30px;
+    text-decoration: none;
+    height: 50px;
+    align-items: center;
+    line-height: 50px;
+    width: 130px;
+    color: #252323;
+    border: 1px solid #FF715B;
+    transition: all 1s ease-in-out;
+    box-shadow: 2px 2px 8px #4C5454;
+}
+
+.buynow:hover {
+    border: 1px solid #252323;
+    background-color: #FF715B;
+    color: #FFF;
+}
+
 /* .container > div {
     border: 2px solid #fff;
 }
@@ -156,6 +244,21 @@ body::after {
     transition: all 0.4s ease-in-out;
 } */
 
+/* *********** SOCIAL MEDIA **************** */
+
+.social-logo > figure > img {
+    height: 30px;
+    width: 30px;
+    color: #FF715B;
+}
+
+.social-logo {
+    display: flex;
+    position: absolute;
+    gap: 10px;
+    left: 55%;
+    top: -150px;
+}
 
 
 
@@ -186,4 +289,32 @@ a.button {
     background-color: #FF715B;
     color: #FFF;
     box-shadow: 2px 1px 8px #FF715B;
+}
+
+
+
+/* ***************** MEDIA QUERIES ************** */
+
+
+@media screen and (max-width:1400px) {
+    .brand > span {
+        color: #252323;
+    }
+
+    .buynow{
+        left: 0;
+    }
+
+    .text-info {
+        right: 1%;
+    }
+
+    .cote-text {
+        right: 20%;   
+    }
+
+    .header-text {
+        top: -30rem;
+        left: 20%;
+    }
 }
