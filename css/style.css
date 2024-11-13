@@ -29,7 +29,27 @@ time, mark, audio, video {
 }
 
 body {
-    background-color: #DBDCE0;
+    background: #FFF;
+    animation: scroll-body linear;
+    animation-timeline: scroll();
+}
+
+@keyframes scroll-body {
+    0%{
+        background:#FFF;
+    }
+    50%{
+        background:#FFF;
+    }
+    90% {
+        background: #1a4c67;
+    }
+    91%{
+        background: linear-gradient(to left top, #1a4c67, #252323);
+    }
+    100%{
+        background: linear-gradient(to left top, #1a4c67, #252323);
+    }
 }
 
 body::after {
@@ -129,7 +149,26 @@ body::after {
     justify-content: center;
     margin-top: 80px;
     animation: stylo-idle 3s infinite;
+    position: relative;
 }
+
+.invert {
+    transform: rotateY(180deg);
+    margin-top: 450px;
+    padding-bottom: 250px;
+    /* animation: scroll-img linear;
+    animation-timeline: scroll(); */
+}
+/* 
+@keyframes scroll-img {
+    from {
+        transform: translateX(-150%);;
+        
+    }
+    to {
+        transform: translateX(0%);
+    }
+} */
 
 @keyframes stylo-idle {
     0%{
@@ -149,6 +188,67 @@ body::after {
     flex: 1;
     display: flex;
     align-items: center;
+}
+
+
+.header-text2 {
+    position: absolute;
+    bottom: 23rem;
+    right: 21%;
+    transform: translateX(-50%);
+}
+
+.header-text2 h1 {
+    font: 3rem;
+    font-weight: 600;
+    color: #FFF;
+}
+.header-text2 h2 {
+    color: #FFF;
+    text-align: center;
+}
+
+.header-text2 p {
+    text-align: center;
+    color: #252323;
+    font-weight: 700;
+    transition: all 0.4s ease-in-out;
+
+}
+
+.header-text2 p:hover{
+    color: #FF715B;
+}
+
+.cote-text2 {
+    position: absolute;
+    transform: rotate(-90deg);
+    left: 43%;
+    bottom: 14rem;
+}
+
+.cote-text2 h4 {
+    font-size: 1.5rem;
+    font-weight: 600;
+    line-height: 1.5rem;
+    color: #FFF;
+}
+
+.cote-text2 p {
+    color: #FFF;
+    font-weight: 500;
+}
+
+.text-info2 {
+    display: block;
+    position: absolute;
+    width: 190px;
+    left: 33%;
+    bottom: 35%;
+}
+
+.text-info2 p {
+    color: white;
 }
 
 .header-text {
@@ -221,16 +321,63 @@ body::after {
     line-height: 50px;
     width: 130px;
     color: #252323;
+    background-color: #FFF;
     border: 1px solid #FF715B;
+    border-radius: 10px;
     transition: all 1s ease-in-out;
     box-shadow: 2px 2px 8px #4C5454;
 }
 
+.buynow:before {
+    content: "";
+    background: linear-gradient(
+      45deg,
+      #03071E,
+      #370617,
+      #6A040F,
+      #9D0208,
+      #D00000,
+      #DC2F02,
+      #E85D04,
+      #F48C06,
+      #FAA307,
+      #FFBA08
+    );
+    position: absolute;
+    top: -2.5px;
+    left: -2.5px;
+    background-size: 400%;
+    z-index: -1;
+    filter: blur(10px);
+    -webkit-filter: blur(5px);
+    width: calc(100% + 4px);
+    height: calc(100% + 4px);
+    animation: glowing-button-85 20s linear infinite;
+    transition: opacity 0.3s ease-in-out;
+    border-radius: 10px;
+  }
+  
+@keyframes glowing-button-85 {
+    0% {
+      background-position: 0 0;
+    }
+    50% {
+      background-position: 400% 0;
+    }
+    100% {
+      background-position: 0 0;
+    }
+}
+
 .buynow:hover {
     border: 1px solid #252323;
-    background-color: #FF715B;
+    background-color: #252323;
     color: #FFF;
 }
+
+/* ************* TEST BOUTON RGB ************************** */
+
+
 
 /* .container > div {
     border: 2px solid #fff;
@@ -316,5 +463,12 @@ a.button {
     .header-text {
         top: -30rem;
         left: 20%;
+    }
+}
+
+
+@media screen and (max-width:400px) {
+    .text-info {
+        right: -13%;
     }
 }
