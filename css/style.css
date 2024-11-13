@@ -44,7 +44,10 @@ body {
     90% {
         background: #1a4c67;
     }
-    91%{
+    91% {
+        background: #123446;
+    }
+    92%{
         background: linear-gradient(to left top, #1a4c67, #252323);
     }
     100%{
@@ -332,6 +335,15 @@ body::after {
     content: "";
     background: linear-gradient(
       45deg,
+      #FFBA08,
+      #FAA307,
+      #F48C06,
+      #E85D04,
+      #DC2F02,
+      #D00000,
+      #9D0208,
+      #6A040F,
+      #370617,
       #03071E,
       #370617,
       #6A040F,
@@ -371,7 +383,7 @@ body::after {
 
 .buynow:hover {
     border: 1px solid #252323;
-    background-color: #252323;
+    background-color: rgba(37, 35, 35, 0.75);
     color: #FFF;
 }
 
@@ -463,6 +475,19 @@ a.button {
     .header-text {
         top: -30rem;
         left: 20%;
+    }
+
+    .text-info2 {
+        right: 1%;
+    }
+
+    .cote-text2 {
+        right: 20%;   
+    }
+
+    .header-text2 {
+        bottom: 20%;
+        left: 60%;
     }
 }
 
