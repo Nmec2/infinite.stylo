@@ -462,6 +462,7 @@ body::after {
     background-image:url("../img/noback.png");
     background-repeat: no-repeat;
     background-size: 100%;
+    filter: saturate(150%) contrast(120%);
  }
 
  #slides .slide_2 {
@@ -469,6 +470,7 @@ body::after {
     background-repeat: no-repeat;
     background-size: 100%;
     flex-shrink: 0;
+    filter: saturate(150%) contrast(120%);
     
  }
 
@@ -476,12 +478,14 @@ body::after {
     background-image:url("../img/styloimg3-removebg-preview.png");
     background-repeat: no-repeat;
     background-size: 100%;
+    filter: saturate(150%) contrast(120%);
  }
 
  #slides .slide_4 {
     background-image:url("../img/styloimgbois-removebg-preview.png");
     background-repeat: no-repeat;
     background-size: 100%;
+    filter: saturate(150%) contrast(120%);
  }
 
  #controls {
@@ -565,10 +569,9 @@ body::after {
 
 /* *********** SOCIAL MEDIA **************** */
 
-.social-logo > figure > img {
+.social-logo > a > img {
     height: 30px;
     width: 30px;
-    color: #FF715B;
 }
 
 .social-logo {
