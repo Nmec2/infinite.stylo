@@ -94,6 +94,7 @@ body::after {
 .brand {
     display: block;
     margin-top: 30px;
+    transform: scale(90%);
 }
 
 .brand > span {
@@ -198,7 +199,7 @@ body::after {
     position: absolute;
     bottom: 23rem;
     right: 21%;
-    transform: translateX(-50%);
+    transform: translateX(-90%);
 }
 
 .header-text2 h1 {
@@ -474,15 +475,15 @@ a.button {
 
     .header-text {
         top: -30rem;
-        left: 20%;
+        left: 28%;
     }
 
     .text-info2 {
-        right: 1%;
+        display: none;
     }
 
     .cote-text2 {
-        right: 20%;   
+        display: none;  
     }
 
     .header-text2 {
@@ -494,6 +495,17 @@ a.button {
 
 @media screen and (max-width:400px) {
     .text-info {
-        right: -13%;
+        display: none;
+    }
+
+    .cote-text {
+        display: none;   
+    }
+
+    .social-logo {
+        display: none;
+    }
+    .header-text2{
+        right: 10px;
     }
 }
