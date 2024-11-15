@@ -399,7 +399,7 @@ body::after {
     width: 700px;
     max-width: 100%;
     text-align: center;
-    margin-top: 350px;
+    margin-top: 200px;
     
  }
  #slider input[type=radio] {
@@ -554,6 +554,37 @@ body::after {
     margin: 20px 30px;
  }
 
+ #slider form {
+    background-color: transparent;
+    backdrop-filter: blur(40px);
+    box-shadow: 3px 3px 10px #252323;
+    width: 300px;
+    height: 300px;
+    align-items: center;
+    border-radius: 25px;
+    transition: all 0.2s ease-in-out;
+    margin-top: 200px;
+ }
+
+ #slider form:hover {
+    backdrop-filter: blur(0px) hue-rotate(15deg) contrast(130%);
+    width: 500px;
+ }
+
+ #slider form input[type="submit"] {
+    height: 40px;
+    width: 100px;
+    border-radius: 5px;
+    color: #FFF;
+    border: 1px solid #FFF;
+    background-color: transparent;
+    transition: all 0.2s ease-in-out;
+ }
+
+ #slider form input[type="submit"]:hover {
+    width: 150px;
+    background-color: #123446;
+ }
 
 /* .container > div {
     border: 2px solid #fff;
