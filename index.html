@@ -7,8 +7,23 @@
     <title>Infinite Ink Pen</title>
     <link rel="stylesheet" href="css/style.css">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+
+    <script>
+
+
+        function preLoad(){
+            a1 = new Image; a1.src = 'img/noback.png';
+            a2 = new Image; a2.src = 'img/stylo1noback.png';
+            a3 = new Image; a3.src = 'img/styloimgbois-removebg-preview.png';
+        }
+
+        function im(image) {
+            document.getElementById(image[0]).src = eval(image + ".src")
+        }
+
+    </script>
 </head>
-<body>
+<body onload="preLoad()">
     <header>
         <div id="head-bottom" class="row-limit-size center">
             <figure>
@@ -37,7 +52,7 @@
             <div class="header-text">
                 <h1>Infinite Ink</h1>
                 <h2>14,99€</h2>
-                <p><a class="buynow" href="buynow.html">BUY NOW</a></p>
+                <p><a class="buynow" href="#a">BUY NOW</a></p>
             </div>
             <div class="cote-text">
                 <h4>INNOVATIVE</h4>
@@ -60,7 +75,7 @@
             <div class="header-text2">
                 <h1>Infinit Blue</h1>
                 <h2>25,99€</h2>
-                <p><a class="buynow" href="buynow.html">BUY NOW</a></p>
+                <p><a class="buynow" href="#a">BUY NOW</a></p>
             </div>
             <div class="cote-text2">
                 <h4>DURABLE</h4>
@@ -77,7 +92,7 @@
 
 
         <div id="slider">
-            <input type="radio" name="slider" id="slide1" checked>
+            <!-- <input type="radio" name="slider" id="slide1" checked>
             <input type="radio" name="slider" id="slide2">
             <input type="radio" name="slider" id="slide3">
             <input type="radio" name="slider" id="slide4">
@@ -117,7 +132,7 @@
                 <label for="slide2"></label>
                 <label for="slide3"></label>
                 <label for="slide4"></label>
-            </div>
+            </div> -->
 
             <form action="" type="" class="center">
                 <br>
@@ -132,11 +147,50 @@
             </form>
         </div>
         
-
-        <br>
-        <br>
-        <br>
-        <br>
+        <section class="main-wrap">
+            <div class="product">
+                <div class="image-gallery">
+                    <img src="img/noback.png" id="a" alt="">
+                
+                </div>
+                <div class="product-details">
+                    <div class="details">
+                        <h2>Infinite Ink Original</h2>
+                        <h3>14€99</h3>
+                        <h4>60% OFF</h4>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Beatae molestias ea ratione facilis consequatur nisi placeat, nesciunt ad corporis, quas reiciendis nostrum dolor nihil vitae laudantium ipsa quae. Omnis, natus!</p>
+                    </div>
+                    <div class="colors">
+                        <form action="" class="form">
+                            <div class="select-color">
+                                <h3>Design:</h3>
+                                <label for="original">
+                                    <input type="radio" name="color" id="original" onclick="im('a1');" checked>
+                                    <span class="original"></span>
+                                </label>
+                                <label for="blue">
+                                    <input type="radio" name="color" id="blue" onclick="im('a2');">
+                                    <span class="blue"></span>
+                                </label>
+                                <label for="wood">
+                                    <input type="radio" name="color" id="wood" onclick="im('a3');">
+                                    <span class="wood"></span>
+                                </label>
+                            </div>
+                        </form>
+                    </div>
+                    <div class="quantity">
+                        <div class="select-quantity">
+                            <h3>Quantity:</h3>
+                            <input type="number" name="quantity" value="1" id="">
+                        </div>
+                    </div>
+                    <div class="sub-btn">
+                        <button class="submit">Add to cart</button>
+                    </div>
+                </div>
+            </div>
+        </section>
 
         <!-- <div class="container row-limit-size center">
             <div class="container-img1">

@@ -400,7 +400,7 @@ body::after {
     max-width: 100%;
     text-align: center;
     margin-top: 200px;
-    
+    margin-bottom: 300px;
  }
  #slider input[type=radio] {
     display: none;
@@ -583,8 +583,202 @@ body::after {
 
  #slider form input[type="submit"]:hover {
     width: 150px;
-    background-color: #123446;
  }
+
+.main-wrap {
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #123446;
+}
+
+.main-wrap .product {
+    width: 90%;
+    max-width: 750px;
+    display: flex;
+}
+
+.main-wrap .product .image-gallery {
+    flex-basis: 43%;
+    background: linear-gradient(to left top,#03071E, #1a4c67 );
+    box-shadow: -10px 5px 10px 10px rgba(0, 0, 0, 0.1);
+    transform: scale(1.5);
+    position: relative;
+}
+
+.main-wrap .product .image-gallery img {
+    width: 100%;
+    padding-top: 100px;
+    padding-right: 20px;
+}
+
+.main-wrap .product .image-gallery .controller{
+    position: absolute;
+    bottom: 40px;
+    right: 20px;
+}
+
+.main-wrap .product .product-details {
+    flex-basis: 53%;
+    background: #FFF;
+    box-shadow: -10px 5px 10px 10px rgba(0, 0, 0, 0.1);
+    padding: 40px 30px 40px 100px;
+}
+
+
+.main-wrap .product .product-details h2 {
+    font-size: 25px;
+    font-weight: 600;
+    line-height: 35px;
+    margin-bottom: 15px;
+    color: #011627; 
+}
+
+.main-wrap .product .product-details h3 {
+    font-size: 20px;
+    font-weight: 600;
+    line-height: 35px;
+    margin-bottom: 10px;
+    color: #011627;
+}
+
+.main-wrap .product .product-details h4 {
+    font-size: 18px;
+    font-weight: 700;
+    line-height: 25px;
+    text-transform: uppercase;
+    margin-bottom: 10px;
+    color: #f72585;
+}
+
+.main-wrap .product .product-details p {
+    font-size: 15px;
+    font-weight: 500;
+    line-height: 15px;
+    color: #011627; 
+}
+
+.main-wrap .product .product-details .colors {
+    margin-bottom: 20px;
+}
+
+.main-wrap .product .product-details .colors .form .select-color {
+    display: flex;
+    align-items: center;
+}
+
+.main-wrap .product .product-details .colors .form .select-color h3 {
+    width: 70px;
+    margin-top: 7px;
+    margin-right: 30px;
+    font-size: 20px;
+    font-weight: 500;
+    color: #011627;
+}
+
+.main-wrap .product .product-details .colors .form .select-color label {
+    display: flex;
+    align-items: center;
+}
+
+.main-wrap .product .product-details .colors .form .select-color input {
+    display: none;
+}
+
+.main-wrap .product .product-details .colors .form .select-color span {
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    margin-right: 10px;
+    cursor: pointer;
+}
+
+.main-wrap .product .product-details .colors .form .select-color .original{
+    background: linear-gradient(to left top, #fff, #252323);
+}
+.main-wrap .product .product-details .colors .form .select-color .blue{
+    background: linear-gradient(to left top, #011627, #252323);
+}
+.main-wrap .product .product-details .colors .form .select-color .wood{
+    background: linear-gradient(to left top, #8a2f14, #252323);
+}
+
+.main-wrap .product .product-details .colors .form .select-color label input:checked + span {
+    transform: scale(.7);
+    box-shadow: 0 0 0 4px #FFF, 0 0 0 6px #011627;
+}
+
+.main-wrap .product .product-details .quantity {
+    margin-bottom: 50px;
+}
+
+.main-wrap .product .product-details .quantity .select-quantity {
+    display: flex;
+    align-items: center;
+}
+
+.main-wrap .product .product-details .quantity .select-quantity h3 {
+    width: 70px;
+    margin-right: 30px;
+    font-size: 20px;
+    font-weight: 500;
+    color: #011627;
+    margin-top: 7px;
+}
+
+.main-wrap .product .product-details .quantity .select-quantity input {
+    background: #e8e8e8;
+    border: 0;
+    outline: 0;
+    padding: 2px 2px 2px 15px;
+    border-radius: 12px;
+    width: 50px;
+}
+
+.main-wrap .product .product-details .sub-btn {
+    padding: 0 30px;
+}
+
+.main-wrap .product .product-details .sub-btn .submit {
+    width: 100%;
+    padding: 10px;
+    border: 0;
+    outline: 0;
+    background: #0077b6;
+    color: #FFF;
+    font-size: 15px;
+    font-weight: 500;
+    border-radius: 30px;
+    box-shadow: 0 10px 10px rgba(85, 63, 240, 0.25);
+    cursor: pointer;
+    transition: .4s linear;
+    position: relative;
+}
+
+.main-wrap .product .product-details .sub-btn .submit:hover {
+    background-color: #00b4d8;
+}
+
+
+/* #container {
+    background-color: tranparent;
+    height: 700px;
+    width: 950px;
+    margin-top: 300px;
+    margin-bottom: 300px;
+    border-radius: 30px;
+    backdrop-filter: blur(80px) saturate(60%);
+    transition: all 0.2s ease-in-out;
+    box-shadow: 3px 3px 10px #252323;
+} */
+
+/* #container:hover {
+    backdrop-filter: blur(0px) saturate(90%)  contrast(120%) ;
+} */
+
 
 /* .container > div {
     border: 2px solid #fff;
