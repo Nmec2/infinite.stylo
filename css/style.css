@@ -427,16 +427,32 @@ body::after {
     height: 300px;
     align-items: center;
     border-radius: 25px;
-    transition: all 0.2s ease-in-out;
+    transition: all 1.5s ease-in-out;
     margin-top: 200px;
     color: #FFF;
  }
 
  #slider form:hover {
-    backdrop-filter: blur(7px) hue-rotate(22deg) contrast(130%);
+    backdrop-filter: blur(0px) hue-rotate(200deg) contrast(130%) saturate(210%);
     /* width: 500px; */
     border-radius: 50%;
     scale: 1.4;
+ }
+
+ textarea, input[type="text"] {
+    color: white;
+ }
+
+ textarea:focus, input[type="text"]:focus {
+    color: white;
+ }
+
+ textarea, input[type="email"] {
+    color: white;
+ }
+
+ textarea:focus, input[type="email"]:focus {
+    color: white;
  }
 
  #slider form input[type="submit"] {
@@ -451,6 +467,7 @@ body::after {
 
  #slider form input[type="submit"]:hover {
     width: 150px;
+    border: 1px solid #00b4d8;
  }
 
 .main-wrap {
@@ -711,7 +728,7 @@ a.button {
 
 
 
-/* TEST STARS */
+/* TEST STARS BOX SHADOWN COPIER COLLER CAR TROP LONG A ECRIRE*/
 
 
 #stars {
@@ -1272,7 +1289,7 @@ a.button {
 
 @keyframes animStar {
     from {
-        transform: translateY(0px);
+        transform: translateY(800px);
     } to {
         transform: translateY(-2000px);
     }
@@ -1331,7 +1348,7 @@ a.button {
 }
 
 
-@media screen and (max-width:400px) {
+@media screen and (max-width:430px) {
     .text-info {
         display: none;
     }
@@ -1356,6 +1373,47 @@ a.button {
     }
     .main-wrap .product .image-gallery{
         display: none;
+    }
+
+    .main-wrap {
+        position: absolute;
+        left: 57px;
+        background-color: transparent;
+    }
+
+    .product {
+        margin-bottom: 200px;
+        margin-right: 20px;
+    }
+
+    @keyframes body-bg {
+        0% {
+            width: 0vw;
+        }
+        100% {
+            width: 70vw;
+        }
+    }
+
+    @keyframes scroll-body {
+        0%{
+            background:#FFF;
+        }
+        5%{
+            background:#FFF;
+        }
+        15% {
+            background: #1a4c67;
+        }
+        33% {
+            background: #123446;
+        }
+        54%{
+            background: linear-gradient(to left top, #123446, #252323);
+        }
+        100%{
+            background: linear-gradient(to left top, #123446, #123446);
+        }
     }
 }
 
